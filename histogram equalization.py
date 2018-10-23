@@ -17,14 +17,14 @@ imagePath = "C:/Users/user/Desktop/lets find/amitabh/AB (3).jpg"
 # Read the image
 image = cv2.imread(imagePath)
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-im2=cv2.equalizeHist(gray)
-rev=np.hstack((gray,im2))
-'''gray=cv2.resize(gray,(100,100),interpolation=cv2.INTER_AREA)
-im2=cv2.resize(im2,(100,100),interpolation=cv2.INTER_AREA)
+equalized = cv2.equalizeHist(gray)
+rev = np.hstack((gray,equalized))
+# gray=cv2.resize(gray,(100,100),interpolation=cv2.INTER_AREA)
+# im2=cv2.resize(im2,(100,100),interpolation=cv2.INTER_AREA)
 
-X=np.array(gray.flatten())
-mean=np.mean(X,0)
-ma_data=X=mean'''
+# X=np.array(gray.flatten())
+# mean=np.mean(X,0)
+# ma_data=X=mean
 
 cv2.imshow("img",rev)
 cv2.waitKey(0)
